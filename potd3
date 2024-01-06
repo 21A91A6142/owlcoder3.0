@@ -1,0 +1,27 @@
+
+nt factor(int a){
+        int c=0;
+        while(a%2==0){
+            c+=1;
+            a=a/2;
+        }
+        for(int i=3;i*i<=a;i=i+2){
+            while(a%i==0){
+                c+=1;
+                a=a/i;
+            }
+        }
+        if(a>1){
+            c+=1;
+        }
+        return c;
+    }
+	int sumOfPowers(int a, int b){
+	    // Code here
+	    int c=0;
+	    for(int i=a;i<=b;i++){
+	        c+=factor(i);
+	    }
+	    return c;
+	    
+	}
