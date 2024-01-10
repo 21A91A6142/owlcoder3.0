@@ -1,0 +1,21 @@
+binary exponential
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int a,n,res=1;
+    cin>>a>>n;
+    while(n){
+        if(n&1){
+            n=n-1;
+            res*=a;
+        }
+        else{
+            n/=2;
+            a=a*a;
+        }
+    }
+    cout<<res;
+}
